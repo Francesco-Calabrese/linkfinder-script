@@ -24,7 +24,6 @@ fi
 
 
 line_num=0
-array_hashes=()
 
 words="$(wc -l $1)"
 printf "Total lines in file: %s\n\n" "${words}"
