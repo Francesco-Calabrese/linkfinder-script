@@ -36,6 +36,9 @@ while read line; do
 	sleep 3
 done < $1
 
-sort output_linkfinderscript | uniq > output_sorted
-rm output_linkfinderscript
-mv output_sorted output_linkfinderscript
+if [ "$2" = "cli" ]; then
+	sort output_linkfinderscript | uniq > output_sorted
+	rm output_linkfinderscript
+	mv output_sorted output_linkfinderscript
+fi
+
